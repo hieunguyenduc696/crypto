@@ -1,10 +1,10 @@
-import React from 'react'
-import { Switch, Route, Link } from 'react-router-dom'
-import { Layout, Typography, Space } from 'antd'
+import React from "react";
+import { Switch, Route, Link } from "react-router-dom";
+import { Layout, Typography, Space } from "antd";
 
-import './App.css'
+import "./App.css";
 
-import { Navbar, HomePage, Cryptocurrencies, News, Exchanges, CryptoDetails } from './components'
+import { Navbar, HomePage, Cryptocurrencies, News, Exchanges, CryptoDetails } from "./components";
 
 const App = () => {
   return (
@@ -34,12 +34,20 @@ const App = () => {
             </Switch>
           </div>
         </Layout>
+        <div className="footer">
+          <Typography.Title level={5} style={{ color: "white", textAlign: "center" }} >
+            Cryptoverse <br />
+            All rights reserved
+          </Typography.Title>
+          <Space>
+            <Link to="/">Home</Link>
+            <Link to="/exchanges">Exchanges</Link>
+            <Link to="/news">News</Link>
+          </Space>
+        </div>
       </div>
-      {/* <div className="footer">
-
-      </div> */}
     </div>
-  )
-}
+  );
+};
 
-export default App
+export default App;
