@@ -12,9 +12,9 @@ const HomePage = () => {
   const { data, isFetching } = useGetCryptosQuery(10)
   const globalStats = data?.data?.stats
 
-  useEffect(() => {
-    console.log(globalStats)
-  }, [globalStats])
+  // useEffect(() => {
+  //   console.log(globalStats)
+  // }, [globalStats])
   if (isFetching) return 'Loading...'
 
   return (
